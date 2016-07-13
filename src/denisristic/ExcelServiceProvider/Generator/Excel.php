@@ -2,8 +2,8 @@
 
 namespace denisristic\ExcelServiceProvider\Generator;
 
-use PhpOffice\PHPExcel\PHPExcel;
-use PhpOffice\PHPExcel\IOFactory;
+use \PhpOffice\PHPExcel\PHPExcel;
+use \PhpOffice\PHPExcel\IOFactory;
 
 class Excel
 {
