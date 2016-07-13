@@ -1,0 +1,26 @@
+{
+  "name": "denisristic/ExcelServiceProvider",
+  "type": "library",
+  "description": "A wrapper for PHPExcel usage in Silex 2 projects",
+  "keywords": ["silex", "symfony", "excel", "PHPExcel", "php", "excel", "xls"],
+  "homepage": "https://github.com/denisristic/ExcelServiceProvider",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Denis Ristic",
+      "homepage": "http://denisristic.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "silex/silex": "~2.0",
+    "doctrine/dbal": "^2.5",
+    "phpoffice/phpexcel": "^1.8",
+    "ramsey/array_column": "^1.1"
+  },
+  "autoload": {
+    "psr-0": {
+      "DC\\ExcelServiceProvider": "src/"
+    }
+  }
+}
