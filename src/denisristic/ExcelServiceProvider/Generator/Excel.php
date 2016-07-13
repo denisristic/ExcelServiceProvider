@@ -2,11 +2,14 @@
 
 namespace denisristic\ExcelServiceProvider\Generator;
 
+use PhpOffice\PHPExcel\PHPExcel;
+use PhpOffice\PHPExcel\IOFactory;
+
 class Excel
 {
     public function generateXLS($headers, $data)
     {
-        $objPHPExcel = new \PHPExcel(); // Create new PHPExcel object
+        $objPHPExcel = new PHPExcel(); // Create new PHPExcel object
 
         $A = 65;
         foreach ($headers as $k => $headerValue) {
@@ -22,7 +25,7 @@ class Excel
             }
         }
 
-        $objWriter = \PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+        $objWriter = IOFactory::createWriter($objPHPExcel, 'Excel5');
         ob_start();
         $objWriter->save('php://output');
         $contents = ob_get_clean();
