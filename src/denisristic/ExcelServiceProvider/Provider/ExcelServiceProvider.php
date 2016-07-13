@@ -4,6 +4,8 @@ namespace denisristic\ExcelServiceProvider\Provider;
 
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
+use denisristic\ExcelServiceProvider\Generator\ExcelDoctrine;
+use denisristic\ExcelServiceProvider\Generator\Excel;
 
 class ExcelServiceProvider implements ServiceProviderInterface
 {
@@ -11,10 +13,10 @@ class ExcelServiceProvider implements ServiceProviderInterface
     {
         $app['excel'] = function ($app) {
             if (isset($app['db'])) {
-                return new \denisristic\ExcelServiceProvider\Generator\ExcelDoctrine($app['db']);
+                return new ExcelDoctrine($app['db']);
             }
 
-            return new \denisristic\ExcelServiceProvider\Generator\Excel();
+            return new Excel();
         };
     }
 
