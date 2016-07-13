@@ -15,7 +15,7 @@ Require the provider using `composer`:
         
 Register the provider in your application somewhere:
 
-        $app->register(new \DC\ExcelServiceProvider\Provider\ExcelServiceProvider());
+        $app->register(new \denisristic\ExcelServiceProvider\Provider\ExcelServiceProvider());
 
 ## Usage
 
