@@ -3,7 +3,7 @@
 namespace denisristic\ExcelServiceProvider\Provider;
 
 use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\ServiceProviderInterface;
 
 class ExcelServiceProvider implements ServiceProviderInterface
 {
