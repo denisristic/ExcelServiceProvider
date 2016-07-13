@@ -2,12 +2,11 @@
 
 namespace denisristic\ExcelServiceProvider\Provider;
 
-use Silex\Application;
 use Pimple\ServiceProviderInterface;
 
 class ExcelServiceProvider implements ServiceProviderInterface
 {
-    public function register(Application $app)
+    public function register(Container $app)
     {
         $app['excel'] = $app->share(function ($app) {
             if (isset($app['db'])) {
@@ -18,7 +17,4 @@ class ExcelServiceProvider implements ServiceProviderInterface
         });
     }
 
-    public function boot(Application $app)
-    {
-    }
 }
