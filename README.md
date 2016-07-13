@@ -11,7 +11,7 @@ This project has ben ported from https://github.com/deanc/ExcelServiceProvider
 
 Require the provider using `composer`:
 
-        composer require deanc/excel-service-provider
+        composer require denisristic/ExcelServiceProvider
         
 Register the provider in your application somewhere:
 
