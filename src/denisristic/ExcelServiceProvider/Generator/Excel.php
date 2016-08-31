@@ -2,14 +2,14 @@
 
 namespace denisristic\ExcelServiceProvider\Generator;
 
-use PHPExcel\Spreadsheet;
+use PHPExcel;
 use PHPExcel\IOFactory;
 
 class Excel
 {
     public function generateXLS($headers, $data)
     {
-        $objPHPExcel = new Spreadsheet(); // Create new PHPExcel object
+        $objPHPExcel = new PHPExcel(); // Create new PHPExcel object
 
         $A = 65;
         foreach ($headers as $k => $headerValue) {
