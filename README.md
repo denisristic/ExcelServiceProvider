@@ -35,7 +35,7 @@ Generate a spreadsheet manually:
                 2 => array('id' => 3, 'name' => 'Bill Murray', 'created' => '2015-01-03 00:00')
         );
 
-        $excel = $app['excel']->generateXLS($headers, $results);
+        $excel = $app['excel']->generateXLS($headers, $data);
 ```
         
 Forcing a download of the spreadsheet:

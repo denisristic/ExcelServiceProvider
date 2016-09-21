@@ -3,7 +3,7 @@
 namespace denisristic\ExcelServiceProvider\Generator;
 
 use PHPExcel;
-use PHPExcel\IOFactory;
+use PHPExcel_IOFactory;
 
 class Excel
 {
@@ -25,7 +25,7 @@ class Excel
             }
         }
 
-        $objWriter = IOFactory::createWriter($objPHPExcel, 'Excel5');
+        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
         ob_start();
         $objWriter->save('php://output');
         $contents = ob_get_clean();
